@@ -3,14 +3,14 @@ import depAccClass
 import intFreqEnum
 from uuid import uuid4
 
-class SavingsAcc(depAccClass.DepAcc):
+class CurrentAcc(depAccClass.DepAcc):
   curr = currEnum.CurrEnum
   intFreq = intFreqEnum.intFreqEnum
 
   accNum = str(uuid4())
   curr = curr.SGD
-  intRate = 0.05
-  intFreq = intFreq.ANNUALLY
+  intRate = 0.03
+  intFreq = intFreq.MONTHLY
 
   # def operation(self) -> str:
   #   return f"savingsAcc.self.depAccClass.DepAcc"
