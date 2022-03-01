@@ -3,16 +3,19 @@ import depAccClass
 import intFreqEnum
 from uuid import uuid4
 
-class savingsAcc(depAccClass.DepAcc):
-  target = depAccClass.DepAcc
+class SavingsAcc(depAccClass.DepAcc):
+  # target = object
   curr = currEnum.CurrEnum
   intFreq = intFreqEnum.intFreqEnum
 
-  target.accNum = str(uuid4())
-  target.curr = curr.SGD
-  target.intRate = 0.05
-  target.intFreq = intFreq.ANNUALLY
-  target.accBalance = 5000.00
+  accNum = str(uuid4())
+  curr = curr.SGD
+  intRate = 0.05
+  intFreq = intFreq.ANNUALLY
+  accBalance = 5000.00
+
+  # def operation(self) -> str:
+  #   return f"savingsAcc.self.depAccClass.DepAcc"
 
 # Here put in all product functions
 
