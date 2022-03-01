@@ -12,7 +12,6 @@ class SavingsAcc(depAccClass.DepAcc):
   curr = curr.SGD
   intRate = 0.05
   intFreq = intFreq.ANNUALLY
-  accBalance = 5000.00
 
   # def operation(self) -> str:
   #   return f"savingsAcc.self.depAccClass.DepAcc"

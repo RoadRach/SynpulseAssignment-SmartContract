@@ -10,7 +10,7 @@ class DepAcc():
   curr = currEnum.CurrEnum.SGD
   intRate = 0.00
   intFreq = intFreqEnum.intFreqEnum.NA
-  accBalance = 0.00
+  accBalance = 5000.00
   bankPostList = []
 
   # def accrueInt():

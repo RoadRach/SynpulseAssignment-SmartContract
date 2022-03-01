@@ -17,7 +17,7 @@ if accType == 'a':
     print("Interests accrued!")
 
   def accrueInt():
-    savingsAccInstance.accBalance = savingsAccInstance.accBalance * (1 + depAccInstance.intRate)
+    savingsAccInstance.accBalance = savingsAccInstance.accBalance * (1 + savingsAccInstance.intRate)
 
   def bankPost():
     savingsAccInstance.bankPostList.append("Current balance after interest accrued: " + str(savingsAccInstance.accBalance))
