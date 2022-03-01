@@ -1,11 +1,11 @@
-import currEnum
-import depAccClass
-import intFreqEnum
+from  currEnum import CurrEnum
+from  depAccClass import DepAcc
+from intFreqEnum import intFreqEnum
 from uuid import uuid4
 
-class CurrentAcc(depAccClass.DepAcc):
-  curr = currEnum.CurrEnum
-  intFreq = intFreqEnum.intFreqEnum
+class CurrentAcc(DepAcc):
+  curr = CurrEnum
+  intFreq = intFreqEnum
 
   accNum = str(uuid4())
   curr = curr.SGD
