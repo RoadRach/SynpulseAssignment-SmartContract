@@ -10,11 +10,7 @@ print("========== (a). Savings Account ============")
 accType = input('Account to check: ')
 
 if accType == 'a':
-
   depAccInstance = depAccClass.DepAcc()
-  # accBalance = depAccInstance.accBalance
-  # accBalance = depAccInstance.accBalance
-  # savingsAccClassInstance = savingsAccClass.savingsAcc()
 
   def job():
     print("Interests accrued!")
@@ -28,7 +24,7 @@ if accType == 'a':
   print(depAccInstance.accNum)
   schedule.every(depAccInstance.intFreq.value).seconds.do(job)
   schedule.every(depAccInstance.intFreq.value).seconds.do(accrueInt)
-  schedule.every(depAccInstance.intFreq.value).seconds.do(bankPost)
+  schedule.every(depAccInstance.intFreq.value + 1).seconds.do(bankPost)
 
   t_end = time.time() + 30
 
