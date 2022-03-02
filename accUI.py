@@ -20,13 +20,13 @@ def job():
   print("Interests accrued!")
 
 def currentBankPost():
-  currentAccInstance.bankPostList.append("Current balance after interest accrued: " + str(currentAccInstance.accBalance))
+  currentAccInstance.bankPostList.append("Current balance after interest accrued: " + str({:.2f}".format(currentAccInstance.accBalance)))
 
 def savingsBankPost():
-  savingsAccInstance.bankPostList.append("Current balance after interest accrued: " + str(savingsAccInstance.accBalance))
+  savingsAccInstance.bankPostList.append("Current balance after interest accrued: " + str({:.2f}".format(savingsAccInstance.accBalance)))
 
 def fixedDepBankPost():
-  fixedDepAccInstance.bankPostList.append("Current balance after interest accrued: " + str(fixedDepAccInstance.accBalance))
+  fixedDepAccInstance.bankPostList.append("Current balance after interest accrued: " + str("{:.2f}".format(fixedDepAccInstance.accBalance)))
 
 def currentAccrueInt():
   currentAccInstance.accBalance = currentAccInstance.accBalance * (1 + currentAccInstance.intRate)
