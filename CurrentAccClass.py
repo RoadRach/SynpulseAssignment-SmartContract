@@ -3,11 +3,11 @@ from  DepAccClass import DepAcc
 from intFreqEnum import intFreqEnum
 from uuid import uuid4
 
-class SavingsAcc(DepAcc):
+class CurrentAcc(DepAcc):
   curr = CurrEnum
   intFreq = intFreqEnum
 
   accNum = str(uuid4())
   curr = curr.SGD
-  intRate = 0.05
-  intFreq = intFreq.ANNUALLY
+  intRate = 0.03
+  intFreq = intFreq.MONTHLY
