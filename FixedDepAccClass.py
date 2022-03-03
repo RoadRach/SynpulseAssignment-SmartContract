@@ -11,3 +11,5 @@ class FixedDepAcc(DepAcc):
   curr = curr.CHF
   intRate = 0.17
   intFreq = intFreq.QUATERLY
+
+

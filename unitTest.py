@@ -8,14 +8,6 @@ from schedule import every, run_pending
 from  currEnum import CurrEnum
 
 class UnitTest(unittest.TestCase):
-
-  # sample test
-
-  def test_when_(self):
-    depAccInstance = DepAcc()
-    depAccInstance.accBalance = 10000.00
-    self.assertEqual(depAccInstance.accBalance, 10000.00)
-
   def test_WhenSavingsAccountIsInstantiated_then_SavingsDecoratorShouldBeImplemented(self):
     savingsAccInstance = SavingsAcc()
     # Ensure it has the account balance from base class DepAcc
@@ -43,7 +35,6 @@ class UnitTest(unittest.TestCase):
     print(savingsAccInstance.bankPostList)
     self.assertEqual(savingsAccInstance.bankPostList, ['Current balance after interest accrued: 52500.00', 'Current balance after interest accrued: 55125.00', 'Current balance after interest accrued: 57881.25', 'Current balance after interest accrued: 60775.31', 'Current balance after interest accrued: 63814.08'])
 
-  # test when account balance is in smaller foreign currency, and the conversion is correct
   def test_when_ForeignCurrencyIsSmaller_then_ConversionToSGDShouldBeCorrect(self):
     fixedDepAccInstance = FixedDepAcc()
     fixedDepAccInstance.curr = CurrEnum.CHF
@@ -58,7 +49,6 @@ class UnitTest(unittest.TestCase):
     chfToSgdConverter()
     self.assert_(fixedDepAccInstance.accBalance == 34000.0)
 
-  # test when account balance is in bigger foreign currency, and the conversion is correct
   def test_when_ForeignCurrencyIsBigger_then_ConversionToSGDShouldBeCorrect(self):
     fixedDepAccInstance = FixedDepAcc()
     fixedDepAccInstance.curr = CurrEnum.JPY
@@ -72,9 +62,6 @@ class UnitTest(unittest.TestCase):
 
     chfToSgdConverter()
     self.assert_(fixedDepAccInstance.accBalance == 590.8768612621129)
-
-
-    # test when the account balance is being converted, then the interests accrued should be correct
 
 if __name__ == '__main__' :
   unittest.main()
