@@ -20,10 +20,10 @@ def job():
   print("Interests accrued!")
 
 def currentBankPost():
-  currentAccInstance.bankPostList.append("Current balance after interest accrued: " + str({:.2f}".format(currentAccInstance.accBalance)))
+  currentAccInstance.bankPostList.append("Current balance after interest accrued: " + str("{:.2f}".format(currentAccInstance.accBalance)))
 
 def savingsBankPost():
-  savingsAccInstance.bankPostList.append("Current balance after interest accrued: " + str({:.2f}".format(savingsAccInstance.accBalance)))
+  savingsAccInstance.bankPostList.append("Current balance after interest accrued: " + str("{:.2f}".format(savingsAccInstance.accBalance)))
 
 def fixedDepBankPost():
   fixedDepAccInstance.bankPostList.append("Current balance after interest accrued: " + str("{:.2f}".format(fixedDepAccInstance.accBalance)))
@@ -40,6 +40,7 @@ def fixedDepAccrueInt():
 def chfToSgdConverter():
   if fixedDepAccInstance.curr.value > 1:
     fixedDepAccInstance.accBalance /= fixedDepAccInstance.curr.value
+    print(fixedDepAccInstance.accBalance)
   elif fixedDepAccInstance.curr.value < 1:
     fixedDepAccInstance.accBalance *= fixedDepAccInstance.curr.value
     print(fixedDepAccInstance.accBalance)
@@ -50,7 +51,7 @@ if accType == 'a':
   every(savingsAccInstance.intFreq.value).seconds.do(job)
   every(savingsAccInstance.intFreq.value).seconds.do(savingsAccrueInt)
   every(savingsAccInstance.intFreq.value + 1).seconds.do(savingsBankPost)
-  t_end = time.time() + 30
+  t_end = time.time() + 60
 
   while time.time() < t_end:
     run_pending()

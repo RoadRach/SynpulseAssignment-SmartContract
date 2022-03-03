@@ -1,5 +1,5 @@
 from  currEnum import CurrEnum
-from  depAccClass import DepAcc
+from  DepAccClass import DepAcc
 from intFreqEnum import intFreqEnum
 from uuid import uuid4
 
