@@ -2,8 +2,6 @@ import unittest
 import time
 from FixedDepAccClass import FixedDepAcc
 from SavingsAccClass import SavingsAcc
-from CurrentAccClass import CurrentAcc
-from DepAccClass import  DepAcc
 from schedule import every, run_pending
 from  currEnum import CurrEnum
 

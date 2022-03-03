@@ -1,9 +1,0 @@
-NamesOFClients = ['Jomhel Dulla', 'Benny Salde', 'Jeremy Eriman', 'Given Bariacto', 'Carlan Pelobello', 'Ryan Manaay', 'Daniel Bandiola']
-ClientPins = ['0001', '0002', '0003', '0004', '0005', '0006', '0007']
-ClientBalances = [10000, 20000, 30000, 40000, 50000, 60000, 70000]
-ClientDeposition = 0
-ClientWithdrawal = 0
-ClientBalance = 0
-disk1 = 1
-disk2 = 7
-u = 0
